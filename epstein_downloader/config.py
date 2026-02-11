@@ -17,6 +17,12 @@ TRACKERS = [
     "http://bt2.archive.org:6969/announce",
     "udp://tracker.opentrackr.org:1337/announce",
     "udp://tracker.openbittorrent.com:6969/announce",
+    "udp://9.rarbg.com:2810/announce",
+    "udp://explodie.org:6969/announce",
+    "udp://tracker.torrent.eu.org:451/announce",
+    "udp://tracker.moeking.me:6969/announce",
+    "udp://open.stealth.si:80/announce",
+    "udp://vibe.community:6969/announce",
 ]
 
 

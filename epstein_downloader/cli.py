@@ -9,7 +9,7 @@ from rich.table import Table
 
 from . import __version__
 from .config import DATASETS, get_zip_url
-from .downloader import Downloader, check_aria2c, get_aria2c_install_instructions
+from .downloader import Downloader, check_aria2c, get_aria2c_install_instructions, diagnose_torrent_connectivity
 from .scraper import DatasetScraper
 
 console = Console()
@@ -218,6 +218,13 @@ def resume(output, dataset):
     console.print(f"[yellow]Found {len(missing)} missing files for Dataset {dataset}[/yellow]")
     pdf_dir = output_dir / f"dataset{dataset}-pdfs"
     downloader.download_pdf_list(missing, pdf_dir)
+
+
+@main.command()
+def diagnose():
+    """Diagnose torrent connectivity issues."""
+    print_banner()
+    diagnose_torrent_connectivity()
 
 
 if __name__ == "__main__":
